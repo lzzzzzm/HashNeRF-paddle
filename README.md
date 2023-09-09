@@ -17,6 +17,7 @@
 * model中存放nerf和hashnerf的实现细节，以及模型后处理部分的实现
 
 # 训练代码
+训练前将数据集准备好，根据具体路径更改config文件中的参数。
 
 ```
 python train.py --config configs/nerf_lego.yml
