@@ -28,3 +28,5 @@ python train.py --config configs/nerf_lego.yml
 python test.py --config configs/nerf_lego.yml --save_dir save --load_from save/040000.pdparams
 ```
 
+![](save/onehours_nerf.gif)
+
