@@ -1,0 +1,34 @@
+# train params
+lrate: 0.0005
+lrate_decay: 250
+train_iters: 40000
+batch_size: 8
+N_rand: 1024
+sparse_loss_weight: 0.0
+tv_loss_weight: 0.0
+
+# define dataset -----------------
+dataset_type: blender
+dataset_root: ./data/nerf_example_data/nerf_synthetic/lego
+half_res: True
+pts_input_ch: 3
+view_input_ch: 3
+pts_embedding_freqs: 10
+view_embeding_freqs: 4
+render_phi: -20
+render_radius: 4.0
+
+# define model
+model_type: 'nerf'
+input_ch: 63
+input_ch_views: 27
+use_viewdirs: True
+
+# define train params
+num_workers: 2
+
+# define pretrained weight when test -----------------
+load_from: ./save/040000.pdparams
+
+# define infer params
+chunk: 32768

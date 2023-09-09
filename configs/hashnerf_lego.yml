@@ -1,0 +1,32 @@
+# train params
+lrate: 0.0005
+lrate_decay: 500
+train_iters: 40000
+batch_size: 2
+N_rand: 1024
+num_workers: 2
+sparse_loss_weight: 1e-10
+tv_loss_weight: 1e-6
+
+# define dataset -----------------
+dataset_type: blender
+dataset_root: ./data/nerf_example_data/nerf_synthetic/lego
+half_res: True
+pts_input_ch: 3
+view_input_ch: 3
+pts_embedding_freqs: 10
+view_embeding_freqs: 4
+render_phi: -20
+render_radius: 4.0
+
+# define model
+model_type: 'hashnerf'
+input_ch: 32
+input_ch_views: 16
+use_viewdirs: True
+
+# define pretrained weight when test -----------------
+load_from: ./save/040000.pdparams
+
+# define infer params
+chunk: 32768
