@@ -4,3 +4,4 @@ matplotlib
 configargparse
 tqdm
 opencv-python
+colorlog

@@ -2,7 +2,7 @@ import configargparse
 
 def config_parse():
     parser = configargparse.ArgumentParser()
-    parser.add_argument('--config', default='configs/nerf_lego.yml', is_config_file=True, help='config file path')
+    parser.add_argument('--config', default='configs/hashnerf_lego.yml', is_config_file=True, help='config file path')
     # dataset define
     parser.add_argument("--dataset_type", type=str, help='dataset type')
     parser.add_argument("--dataset_root", type=str, help='dataset_root')
